@@ -42,7 +42,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ЖДИ!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="35" translatesAutoresizingMaskIntoConstraints="NO" id="9Wn-M1-rwd">
                                                 <rect key="frame" x="22" y="59" width="128" height="54"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -100,8 +100,11 @@
                     </view>
                     <connections>
                         <outlet property="button" destination="Q4Q-ut-qFQ" id="lAR-pf-yh6"/>
+                        <outlet property="greenLightLabel" destination="6ZS-pv-dQr" id="aaW-U9-B5M"/>
                         <outlet property="greenLightView" destination="mJS-1j-Jgf" id="JlW-lD-LhL"/>
+                        <outlet property="redLightLabel" destination="8MH-Ai-BQH" id="0Do-IO-w6I"/>
                         <outlet property="redLightView" destination="WP9-Oh-F0v" id="xgC-Zv-fX3"/>
+                        <outlet property="yellowLightLabel" destination="9Wn-M1-rwd" id="1k4-XG-wMc"/>
                         <outlet property="yellowLightView" destination="2Eo-DP-V7r" id="fyQ-v8-rFW"/>
                     </connections>
                 </viewController>

@@ -12,6 +12,10 @@ class ViewController: UIViewController {
     @IBOutlet var yellowLightView: UIView!
     @IBOutlet var greenLightView: UIView!
 
+    @IBOutlet var redLightLabel: UILabel!
+    @IBOutlet var yellowLightLabel: UILabel!
+    @IBOutlet var greenLightLabel: UILabel!
+    
     @IBOutlet var button: UIButton!
     
     private var currentLight = CurrentLight.red // задали первоначальную позицию
@@ -31,6 +35,9 @@ class ViewController: UIViewController {
         yellowLightView.alpha = 0.3 // или же = lightIsOff
         greenLightView.alpha = 0.3 // или же = lightIsOff
         
+        redLightLabel.isHidden.toggle()
+        yellowLightLabel.isHidden.toggle()
+        greenLightLabel.isHidden.toggle()
     }
     
     override func viewWillLayoutSubviews() {
@@ -49,15 +56,21 @@ class ViewController: UIViewController {
         switch currentLight {
         case .red:
             redLightView.alpha = 1 // или же = lightIsOn
+            redLightLabel.isHidden.toggle()
             greenLightView.alpha = 0.3 // или же = lightIsOff
+            greenLightLabel.isHidden = true
             currentLight = .yellow
         case .yellow:
             yellowLightView.alpha = 1
+            yellowLightLabel.isHidden.toggle()
             redLightView.alpha = 0.3
+            redLightLabel.isHidden.toggle()
             currentLight = .green
         case .green:
             greenLightView.alpha = 1
+            greenLightLabel.isHidden.toggle()
             yellowLightView.alpha = 0.3
+            yellowLightLabel.isHidden.toggle()
             currentLight = .red
         }
         
