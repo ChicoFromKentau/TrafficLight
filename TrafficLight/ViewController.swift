@@ -31,6 +31,9 @@ class ViewController: UIViewController {
         yellowLightView.alpha = 0.3 // или же = lightIsOff
         greenLightView.alpha = 0.3 // или же = lightIsOff
         
+    }
+    
+    override func viewWillLayoutSubviews() {
         // скругляем углы динамических вьюшек
         redLightView.layer.cornerRadius = redLightView.frame.width / 2
         yellowLightView.layer.cornerRadius = yellowLightView.frame.width / 2
@@ -38,7 +41,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonDidTap() {
-        
         // заменяем текст кнопки при нажатии
         if button.currentTitle == "НАЧАТЬ" {
             button.setTitle("ПЕРЕКЛЮЧИТЬ", for: .normal)
@@ -58,6 +60,20 @@ class ViewController: UIViewController {
             yellowLightView.alpha = 0.3
             currentLight = .red
         }
+        
+        // способ через оператор if
+        //  if redLight.alpha == 1 {
+        //      redLight.alpha = lightIsOff
+        //      yellowLight.alpha = lightIsOn
+        //  } else if yellowLight.alpha == 1 {
+        //      yellowLight.alpha = lightIsOff
+        //      greenLight.alpha = lightIsOn
+        //  } else if greenLight.alpha == 1 {
+        //      greenLight.alpha = lightIsOff
+        //      redLight.alpha = lightIsOn
+        //  } else {
+        //      redLight.alpha = lightIsOn
+        //  }
     }
 }
 
