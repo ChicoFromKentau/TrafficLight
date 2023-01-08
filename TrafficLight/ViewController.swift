@@ -48,6 +48,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonDidTap() {
+        // добавляем среднюю taptic-вибрацию
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.prepare()
+        generator.impactOccurred()
+        
         // заменяем текст кнопки при нажатии
         if button.currentTitle == "НАЧАТЬ" {
             button.setTitle("ПЕРЕКЛЮЧИТЬ", for: .normal)
